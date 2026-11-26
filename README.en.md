@@ -10,9 +10,13 @@ This repo covers version pinning, install, acceptance, output contract, cache, a
 
 ## Why this repo exists
 
-Maya-DS runs DeepSeek V4.1 Flash, but defaults are generic: JSON wrapped in fences, slow long-context refetch, oversized thinking budget, updates wiping custom keys. This repo keeps the patches and settings behind an 88/89 acceptance run.
+Honestly, Qwen3.8 is fast and solid for everyday work. But when the task gets complex or needs something genuinely new, it tends to get stuck going in circles. That is when a bigger model has to step in: DeepSeek.
 
-Maya fixes DS daily; pinning beats chasing latest. Only v1.1.80 behavior is guaranteed.
+The 2.5 class is already strong enough that benchmarks mostly pass. Small leftover errors usually get filtered out in a real agent loop, but a light repair pass keeps output stable.
+
+What DeepSeek adds over Qwen3.8 is not scoreboard points — it is creativity and reasoning you cannot measure with benchmarks. An RTX 6000 runs it a bit slowly, and even a 5090 feels the pain, but some problems leave no alternative. With the hosted DeepSeek acting up lately, a local setup that reproduces 99% of it matters a lot.
+
+On the technical side: DeepSeek V4.1 Flash runs on Maya-DS, but the defaults target generic setups — JSON wrapped in fences, slow long-context refetch, oversized thinking budget, updates wiping custom keys. This repo keeps the patches and settings behind an 88/89 acceptance run. Only v1.1.80 behavior is guaranteed.
 
 ## Start here
 
