@@ -2,6 +2,8 @@
 
 [中文版](README.md)
 
+![House cat](assets/cat.jpg)
+
 Check date: 2026-11-26
 
 Field notes for running DeepSeek V4.1 Flash on Maya-DS: parameters, patches, and measurements on an RTX PRO 6000. No engine-switching operations included.
@@ -17,8 +19,6 @@ The 2.5 class is already strong enough that benchmarks mostly pass. Small leftov
 What DeepSeek adds over Qwen3.8 is not scoreboard points — it is creativity and reasoning you cannot measure with benchmarks. An RTX 6000 runs it a bit slowly, and even a 5090 feels the pain, but some problems leave no alternative. With the hosted DeepSeek acting up lately, a local setup that reproduces 99% of it matters a lot.
 
 On the technical side: DeepSeek V4.1 Flash runs on Maya-DS, but the defaults target generic setups — JSON wrapped in fences, slow long-context refetch, oversized thinking budget, updates wiping custom keys. This repo keeps the patches and settings behind an 88/89 acceptance run. Only v1.1.80 behavior is guaranteed.
-
-![House cat](assets/cat.jpg)
 
 ## Start here
 
