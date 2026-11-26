@@ -5,8 +5,8 @@
 ## 來源種類
 
 - 整合案例：本機 8 篇 OB 報告（去識別化後整理）。
-- 本次官方佐證：Maya releases（v1.1.80）、docs（MEMORY／SETTINGS／SETUP）、issue #299、#763、#1089、#1206／#1207。
-- 新增上游補充：Hugging Face `peasantsmith/DeepSeek-V4.1-Flash-1017-Maya-GGUF`（rev `c33d87b8`）、Unsloth Dynamic 3.1、DeepSeek 官方 JSON 提醒。
+- 本次官方佐證：[mw00/project-maya](https://github.com/mw00/project-maya) releases（v1.1.80）、docs（MEMORY／SETTINGS／SETUP）、issue #299、#763、#1089、#1206／#1207。
+- 新增上游補充：Hugging Face [peasantsmith/DeepSeek-V4.1-Flash-1017-Maya-GGUF](https://huggingface.co/peasantsmith/DeepSeek-V4.1-Flash-1017-Maya-GGUF)（rev `c33d87b8`）、Unsloth Dynamic 3.1、DeepSeek 官方 JSON 提醒。
 - 背景回報：zephel01 實測、Strata issue #4163、#5589（僅連結，不宣稱採用修法）。
 
 ## 本機報告（Maya-DS 範圍內）

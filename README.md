@@ -41,6 +41,12 @@
 2. 套補丁：`git apply v1.1.80/patches/*.patch`，或跑 `v1.1.80/reapply.sh`。
 3. 起服務，打 `/v1/models` 與一次 `chat/completions` 驗收。
 
+## 上游出處（upstream）
+
+* 引擎：[mw00/project-maya](https://github.com/mw00/project-maya)（v1.1.80，commit `1d0f8c5`）
+* 模型：[peasantsmith/DeepSeek-V4.1-Flash-1017-Maya-GGUF](https://huggingface.co/peasantsmith/DeepSeek-V4.1-Flash-1017-Maya-GGUF)（rev `c33d87b8`）
+* 本專案為獨立整理，非 GitHub fork；授權鏈見 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
 ## 核心表格
 
 | 項目 | 值（核對日期 2026-11-26） |
