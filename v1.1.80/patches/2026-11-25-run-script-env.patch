@@ -1,0 +1,10 @@
+--- run-maya-ds4.sh.bak-20261125-2342	2026-11-25 22:57:14.922971218 +0800
++++ run-maya-ds4.sh	2026-11-25 23:41:29.375601732 +0800
+@@ -1,4 +1,7 @@
+ #!/bin/sh
+ # starts the Project Maya dashboard and API (written by maya.py; ./maya.sh does the same)
+ cd /home/arthur/maya-5092 || exit 1
++# 2026-11-25: 輸出契約（frontend.py 的 MAYA_DS4_OUTPUT_CONTRACT 讀它）
++MAYA_DS4_OUTPUT_CONTRACT="Output contract: when the request asks for machine-readable output — JSON, a named schema, or exact text with no extra words — reply with that content alone. Do not wrap it in markdown code fences, do not add a preamble, explanation, apology or closing note, and do not restate the request."
++export MAYA_DS4_OUTPUT_CONTRACT
+ exec /home/arthur/maya-5092/.venv/bin/python /home/arthur/maya-5092/maya.py --config /home/arthur/maya-5092/maya-ds4.json --port 8090 "$@"

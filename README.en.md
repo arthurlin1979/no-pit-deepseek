@@ -1,0 +1,58 @@
+# No-Pit: DeepSeek V4.1 Flash + Maya-DS
+
+[中文版](README.md)
+
+Check date: 2026-11-26
+
+Field notes for running DeepSeek V4.1 Flash on Maya-DS: parameters, patches, and measurements on an RTX PRO 6000. No engine-switching operations included.
+
+This repo covers version pinning, install, acceptance, output contract, cache, and speed. Numbers come from local reports and engine logs, partly organized with AI help.
+
+## Why this repo exists
+
+Maya-DS runs DeepSeek V4.1 Flash, but defaults are generic: JSON wrapped in fences, slow long-context refetch, oversized thinking budget, updates wiping custom keys. This repo keeps the patches and settings behind an 88/89 acceptance run.
+
+Maya fixes DS daily; pinning beats chasing latest. Only v1.1.80 behavior is guaranteed.
+
+## Start here
+
+- [Entry for AI agents](AGENTS.md)
+- [Quick Start](QUICKSTART.md)
+- [Pitfall checklist](PITFALLS.md): DS-001 and up, index only
+- [Records index](catalogue/INDEX.md)
+- [Measured speed](catalogue/speed.md)
+- [Change blocks](BLOCKS.md)
+- [Sources](SOURCES.md)
+- [Third-party notices](THIRD_PARTY_NOTICES.md)
+- [v1.1.80 notes](v1.1.80/RELEASE.en.md)
+
+## Core table
+
+| Item | Value (2026-11-26) |
+|---|---|
+| Engine | Maya v1.1.80, `maya-ds4`, `--parallel 4` |
+| Model | DeepSeek-V4.1-Flash Maya-S, context 262144 |
+| 89-task | 88/89 (89/89 with fair harness) |
+| Decode | Median about 70 tok/s clean; lower with contention |
+| 250K refetch | About 0.21s after switching conversations |
+
+## Known limits
+
+- Immediate resend of the same prompt does not hit slots; this is engine semantics.
+- Abliteration costs about 5% decode; disable per request if needed.
+- Idle RAM does not speed decode; use it for conversation slots.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
+
+## Scope
+
+- Historical record; not a live guarantee.
+- Out of scope: other engines, private logs, absolute home paths.
+- Siblings: [no-pit-qwen38](https://github.com/arthurlin1979/no-pit-qwen38) / [no-pit-glm](https://github.com/arthurlin1979/no-pit-glm) / [no-pit-google-workspace](https://github.com/arthurlin1979/no-pit-google-workspace).
+
+## Limits
+
+- Sources guide verification; not every entry is an upstream bug.
+- Full live flow not re-run.

@@ -1,0 +1,39 @@
+{
+  "exe": "$HOME/maya-5092/build/maya-ds4",
+  "args": [
+    "--pack",
+    "$HOME/Maya-data/models/DeepSeek-V4.1-Flash-1017-GGUF/Maya-S/maya-ds4",
+    "--max-context",
+    "262144",
+    "--tp",
+    "1",
+    "--threads",
+    "on",
+    "--parallel",
+    "4",
+    "--ablate",
+    "$HOME/Maya-data/models/refusal-directions/DeepSeek-V4.1-Flash-refusal-direction.gguf",
+    "--ablate-default",
+    "on",
+    "--dspark",
+    "on"
+  ],
+  "cwd": "$HOME/maya-5092",
+  "tokenizer": "$HOME/Maya-data/models/DeepSeek-V4.1-Flash-1017-GGUF/Maya-S/maya-ds4/tokenizer",
+  "model_name": "deepseek-v4.1-flash",
+  "gpu": [0],
+  "sampling": {"temperature": 1.0, "top_p": 1.0},
+  "reasoning_effort": "low",
+  "port": 8090,
+  "host": "0.0.0.0",
+  "log": "$HOME/maya-5092/maya-ds4.log",
+  "thinking_budget": 2048,
+  "env": {
+    "MAYA_DS4_SLOT_KEEP": "1",
+    "MAYA_DS4_SLOT_RAM_GB": "32",
+    "MAYA_DS4_SLOT_CAP": "8",
+    "MAYA_DS4_PREFIX_KEEP": "4",
+    "MAYA_DS4_PREFIX_GB": "8",
+    "MAYA_DS4_KEEP_THINKING": "1"
+  }
+}

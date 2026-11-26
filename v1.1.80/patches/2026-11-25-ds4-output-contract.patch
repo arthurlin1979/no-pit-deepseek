@@ -1,0 +1,19 @@
+--- serve/frontend.py.bak-20261125-2342	2026-11-25 18:04:12.822764918 +0800
++++ serve/frontend.py	2026-11-25 23:41:55.646042838 +0800
+@@ -128,6 +128,16 @@
+             # namespace semantics, tasks and thinking policy in one implementation.
+             from serve.ds41_encoding import encode_messages
+             history = copy.deepcopy(messages)
++            contract = os.environ.get("MAYA_DS4_OUTPUT_CONTRACT", "").strip()
++            if contract:
++                # Arthur 2026-11-25: a machine-readable answer is sent bare (no code fences, no preamble).
++                if not history or history[0].get("role") != "system":
++                    history.insert(0, {"role": "system", "content": ""})
++                body = history[0].get("content")
++                if isinstance(body, str):
++                    history[0]["content"] = (body + "\n\n" + contract).strip()
++                elif body is None:
++                    history[0]["content"] = contract
+             schemas = [t if "function" in t else {"type": "function", "function": t}
+                        for t in tools or []]
+             if schemas:
