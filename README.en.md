@@ -18,6 +18,8 @@ What DeepSeek adds over Qwen3.8 is not scoreboard points — it is creativity an
 
 On the technical side: DeepSeek V4.1 Flash runs on Maya-DS, but the defaults target generic setups — JSON wrapped in fences, slow long-context refetch, oversized thinking budget, updates wiping custom keys. This repo keeps the patches and settings behind an 88/89 acceptance run. Only v1.1.80 behavior is guaranteed.
 
+![House cat](assets/cat.jpg)
+
 ## Start here
 
 - [Entry for AI agents](AGENTS.md)

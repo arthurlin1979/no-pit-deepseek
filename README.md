@@ -18,6 +18,8 @@
 
 技術面補一句：DeepSeek V4.1 Flash 用 Maya-DS 跑得動，但預設值是給通用環境的：JSON 常包 code fence、長文重讀很慢、思考預算預設太大、更新會洗掉自訂參數。我把驗收 88/89 過程中踩到的坑全部留下來，做成可重套的補丁與設定。這包只保證 v1.1.80 的行為，其他版本僅供參考。
 
+![鎮站之貓](assets/cat.jpg)
+
 ## 先從這裡讀
 
 - [給 AI agents 的入口](AGENTS.md)：先讀本檔，再查 PITFALLS 與 catalogue。
